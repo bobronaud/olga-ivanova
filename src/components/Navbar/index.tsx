@@ -24,18 +24,21 @@ const Navbar = () => {
   const handleNavigate = () => null;
 
   return (
-    <AppBar position='fixed'>
-      <Container>
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <img src={logo} alt='logo cute flower' />
-          {isDesktopUsing ? (
-            <MenuDesktop sections={sections} handleNavigate={handleNavigate} />
-          ) : (
-            <MenuMobile sections={sections} handleNavigate={handleNavigate} />
-          )}
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <AppBar position='fixed'>
+        <Container maxWidth='md'>
+          <Toolbar sx={{ justifyContent: 'space-between' }}>
+            <img src={logo} alt='logo cute flower' />
+            {isDesktopUsing ? (
+              <MenuDesktop sections={sections} handleNavigate={handleNavigate} />
+            ) : (
+              <MenuMobile sections={sections} handleNavigate={handleNavigate} />
+            )}
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Toolbar />
+    </>
   );
 };
 

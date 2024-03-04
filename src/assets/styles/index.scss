@@ -1,0 +1,80 @@
+$intro-bg: #fff;
+$intro-color: #0b0340;
+$corner-color: #111211;
+$image-border-color: blue;
+$grad: linear-gradient(to bottom right, green, blue, purple);
+
+#intro-wrap {
+  background-color: $intro-bg;
+  color: $intro-color;
+  padding: 0;
+}
+
+.banner-box {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  border: 2px solid $corner-color;
+  transition: all 0.3s ease;
+  margin: auto;
+  &:before,
+  &:after {
+    content: '';
+    z-index: 1;
+    display: block;
+    position: absolute;
+    background: $intro-bg;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+  }
+  &:before {
+    width: calc(100% + 4px);
+    height: 80%;
+  }
+  &:after {
+    height: calc(100% + 4px);
+    width: 90%;
+  }
+}
+.banner-text {
+  z-index: 2;
+  position: relative;
+  text-align: center;
+
+  * {
+    padding: 3px 10px 3px 10px;
+    margin: 5px;
+  }
+}
+
+.image-wrap {
+  position: relative;
+  background: $grad;
+  padding: 6px;
+  padding-bottom: 0;
+  border-radius: 10px;
+}
+
+.intro-img {
+  border-radius: 10px;
+}
+
+.quote-span {
+  color: #19c23d;
+}
+
+.quote-start {
+  &:before {
+    position: relative;
+    left: -15px;
+    top: 40px;
+    content: '‟';
+  }
+}
+.quote {
+  &:after {
+    content: '”';
+  }
+}

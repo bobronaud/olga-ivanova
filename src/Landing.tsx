@@ -1,12 +1,17 @@
 import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
 
 import Navbar from './components/Navbar';
+import Intro from './components/Intro';
 
 const Landing = () => {
   return (
-    <Container>
+    <>
       <Navbar />
-    </Container>
+      <Box>
+        <Intro />
+      </Box>
+    </>
   );
 };
 
