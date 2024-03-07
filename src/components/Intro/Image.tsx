@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import image from '../../assets/images/img-intro.jpg';
+import image from '../../assets/images/withPuplis.jpg';
 
 const Image = () => {
   return (

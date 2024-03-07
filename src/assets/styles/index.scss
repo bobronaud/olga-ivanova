@@ -3,11 +3,33 @@ $intro-color: #0b0340;
 $corner-color: #111211;
 $image-border-color: blue;
 $grad: linear-gradient(to bottom right, green, blue, purple);
+$photo-grad: linear-gradient(to bottom right, red, orange, blue);
+
+$about-bg: #e7ecff;
+$about-color: #0e1563;
+
+body {
+  padding: 0;
+}
 
 #intro-wrap {
   background-color: $intro-bg;
   color: $intro-color;
-  padding: 0;
+}
+
+#about-wrap {
+  background-color: $about-bg;
+  color: $about-color;
+
+  hr {
+    border-color: $about-color;
+    background-color: $about-color;
+    color: $about-color;
+  }
+
+  a {
+    color: $about-color;
+  }
 }
 
 .banner-box {
@@ -52,6 +74,14 @@ $grad: linear-gradient(to bottom right, green, blue, purple);
 .image-wrap {
   position: relative;
   background: $grad;
+  padding: 6px;
+  padding-bottom: 0;
+  border-radius: 10px;
+}
+
+.photo-wrap {
+  position: relative;
+  background: $photo-grad;
   padding: 6px;
   padding-bottom: 0;
   border-radius: 10px;

@@ -1,8 +1,8 @@
-import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
+import About from './components/About';
 
 const Landing = () => {
   return (
@@ -10,6 +10,7 @@ const Landing = () => {
       <Navbar />
       <Box>
         <Intro />
+        <About />
       </Box>
     </>
   );

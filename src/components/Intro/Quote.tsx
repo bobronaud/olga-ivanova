@@ -13,7 +13,7 @@ const Quote = () => {
         px: 0,
       }}>
       <Typography variant='h4' component='div' className='quote-start'></Typography>
-      <Typography variant='h4' component='p' sx={{ pb: 3 }} className='quote'>
+      <Typography variant='h4' sx={{ pb: 3 }} className='quote'>
         {t('intro.quote.text.p1')}
         <span className='quote-span'>{t('intro.quote.text.span1')}</span>
         {t('intro.quote.text.p2')}
@@ -23,7 +23,7 @@ const Quote = () => {
         {t('intro.quote.text.p4')}
       </Typography>
       <Typography variant='h4' component='div' className='quote-end'></Typography>
-      <Typography variant='h5' component='p'>
+      <Typography variant='h5'>
         <i>{t('intro.quote.author')}</i>
       </Typography>
     </Box>

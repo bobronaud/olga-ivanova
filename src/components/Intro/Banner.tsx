@@ -13,15 +13,9 @@ const Banner = () => {
         mb: 5,
       }}>
       <Box className='banner-text'>
-        <Typography variant='h3' component='p'>
-          {t('intro.banner.fullname')}
-        </Typography>
-        <Typography variant='h4' component='p'>
-          {t('intro.banner.title')}
-        </Typography>
-        <Typography variant='h5' component='p'>
-          {t('intro.banner.text')}
-        </Typography>
+        <Typography variant='h3'>{t('intro.banner.fullname')}</Typography>
+        <Typography variant='h4'>{t('intro.banner.title')}</Typography>
+        <Typography variant='h5'>{t('intro.banner.text')}</Typography>
       </Box>
     </Box>
   );
