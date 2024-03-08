@@ -8,6 +8,9 @@ $photo-grad: linear-gradient(to bottom right, red, orange, blue);
 $about-bg: #e7ecff;
 $about-color: #0e1563;
 
+$parents-bg: #99ff99;
+$parents-color: #032609;
+
 body {
   padding: 0;
 }
@@ -29,6 +32,15 @@ body {
 
   a {
     color: $about-color;
+  }
+}
+
+#parents-wrap {
+  background-color: $parents-bg;
+  color: $parents-color;
+  .accordion {
+    background-color: #6aeb82;
+    color: $parents-color;
   }
 }
 
