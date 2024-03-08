@@ -7,15 +7,17 @@ import Typography from '@mui/material/Typography';
 
 import Info from './Info';
 
+// @ts-ignore
 const importAll = (r) => {
-  const images = r.keys().reduce((acc, item) => {
+  const images = r.keys().reduce((acc: string[], item: string) => {
     const image = r(item);
     return [...acc, image];
   }, []);
   return images;
 };
 
-const images = importAll(
+const images: string[] = importAll(
+  // @ts-ignore
   require.context('../../assets/images/myCertificates', false, /.jpg/),
 );
 

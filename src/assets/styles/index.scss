@@ -11,6 +11,9 @@ $about-color: #0e1563;
 $parents-bg: #99ff99;
 $parents-color: #032609;
 
+$pupils-bg: #fffadd;
+$pupils-color: #292903;
+
 body {
   padding: 0;
 }
@@ -42,6 +45,11 @@ body {
     background-color: #6aeb82;
     color: $parents-color;
   }
+}
+
+#pupils-wrap {
+  background-color: $pupils-bg;
+  color: $pupils-color;
 }
 
 .banner-box {
