@@ -7,6 +7,7 @@ import Parents from './components/Parents';
 import Pupils from './components/Pupils';
 import Techniques from './components/Techniques';
 import WebResources from './components/WebResources';
+import Footer from './components/Footer';
 
 const Landing = () => {
   return (
@@ -20,6 +21,7 @@ const Landing = () => {
         <Techniques />
         <WebResources />
       </Box>
+      <Footer />
     </>
   );
 };

@@ -17,11 +17,16 @@ $pupils-color: #292903;
 $techniques-bg: #badbad;
 $techniques-color: #202620;
 
-$webresources-bg: #e5e4e2;
+$webresources-bg: #fff;
 $webresources-color: #243b91;
 
 body {
   padding: 0;
+}
+
+#footer {
+  background-color: #1976d2;
+  color: #fff;
 }
 
 #intro-wrap {
