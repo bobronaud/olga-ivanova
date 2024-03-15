@@ -25,32 +25,34 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <Container maxWidth={false} id='about-wrap'>
-      <Container
-        maxWidth='md'
-        id='obo-mne'
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          py: 5,
-        }}>
-        <Typography variant='h2' component='h1' sx={{ mb: 3 }}>
-          {t('about.header')}
-        </Typography>
-        <Info />
-        <Typography variant='h4' component='h2' sx={{ mb: 3 }}>
-          {t('about.achivments.header')}
-        </Typography>
-        <Grid container spacing={1}>
-          {images.map((image, index) => (
-            <Grid item xs={4} md={3} key={index}>
-              <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
-            </Grid>
-          ))}
-        </Grid>
+    <>
+      <Box id='obo-mne' />
+      <Container maxWidth={false} id='about-wrap'>
+        <Container
+          maxWidth='md'
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            py: 5,
+          }}>
+          <Typography variant='h2' component='h1' sx={{ mb: 3 }}>
+            {t('about.header')}
+          </Typography>
+          <Info />
+          <Typography variant='h4' component='h2' sx={{ mb: 3 }}>
+            {t('about.achivments.header')}
+          </Typography>
+          <Grid container spacing={1}>
+            {images.map((image, index) => (
+              <Grid item xs={4} md={3} key={index}>
+                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+              </Grid>
+            ))}
+          </Grid>
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 };
 

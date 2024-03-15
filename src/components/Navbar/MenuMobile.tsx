@@ -6,9 +6,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
+type sectionType = {
+  name: string;
+  hash: string;
+};
+
 interface PropsType {
-  sections: string[];
-  handleNavigate: () => null;
+  sections: sectionType[];
+  handleNavigate: (hash: string) => void;
 }
 
 const MenuMobile = ({ sections, handleNavigate }: PropsType) => {
@@ -49,8 +54,8 @@ const MenuMobile = ({ sections, handleNavigate }: PropsType) => {
           display: 'block',
         }}>
         {sections.map((section) => (
-          <MenuItem key={section} onClick={handleNavigate}>
-            {section}
+          <MenuItem key={section.name} onClick={() => handleNavigate(section.hash)}>
+            {section.name}
           </MenuItem>
         ))}
       </Menu>

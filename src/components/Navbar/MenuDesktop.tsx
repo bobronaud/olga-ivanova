@@ -1,9 +1,14 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
+type sectionType = {
+  name: string;
+  hash: string;
+};
+
 interface PropsType {
-  sections: string[];
-  handleNavigate: () => null;
+  sections: sectionType[];
+  handleNavigate: (hash: string) => void;
 }
 
 const MenuDesktop = ({ sections, handleNavigate }: PropsType) => {
@@ -11,10 +16,10 @@ const MenuDesktop = ({ sections, handleNavigate }: PropsType) => {
     <Box sx={{ display: 'flex' }}>
       {sections.map((section) => (
         <Button
-          key={section}
-          onClick={handleNavigate}
+          key={section.name}
+          onClick={() => handleNavigate(section.hash)}
           sx={{ my: 0, p: 2, color: 'white', display: 'block', fontWeight: 600 }}>
-          {section}
+          {section.name}
         </Button>
       ))}
     </Box>

@@ -20,8 +20,24 @@ $techniques-color: #202620;
 $webresources-bg: #fff;
 $webresources-color: #243b91;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 0;
+}
+
+#v-nachalo,
+#obo-mne,
+#roditelyam,
+#vospitanniki,
+#metodicheskiy-fond,
+#poleznie-internet-resursi {
+  display: block;
+  height: 64px; /*same height as header*/
+  margin-top: -64px; /*same height as header*/
+  visibility: hidden;
 }
 
 #footer {
@@ -50,6 +66,7 @@ body {
 }
 
 #parents-wrap {
+  scroll-padding-top: 100px;
   background-color: $parents-bg;
   color: $parents-color;
   .accordion {

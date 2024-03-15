@@ -9,19 +9,39 @@ import MenuDesktop from './MenuDesktop';
 import MenuMobile from './MenuMobile';
 
 const sections = [
-  'В начало',
-  'Обо мне',
-  'Родителям',
-  'Воспитанники',
-  'Методички',
-  'Ресурсы',
+  {
+    name: 'В начало',
+    hash: 'v-nachalo',
+  },
+  {
+    name: 'Обо мне',
+    hash: 'obo-mne',
+  },
+  {
+    name: 'Родителям',
+    hash: 'roditelyam',
+  },
+  {
+    name: 'Воспитанники',
+    hash: 'vospitanniki',
+  },
+  {
+    name: 'Методички',
+    hash: 'metodicheskiy-fond',
+  },
+  {
+    name: 'Ресурсы',
+    hash: 'poleznie-internet-resursi',
+  },
 ];
 
 const Navbar = () => {
   const theme = useTheme();
   const isDesktopUsing = useMediaQuery(theme.breakpoints.up('md'));
 
-  const handleNavigate = () => null;
+  const handleNavigate = (hash: string): void => {
+    window.location.hash = '#' + hash;
+  };
 
   return (
     <>
