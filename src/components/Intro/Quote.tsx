@@ -15,11 +15,11 @@ const Quote = () => {
       <Typography variant='h4' component='div' className='quote-start'></Typography>
       <Typography variant='h4' sx={{ pb: 3 }} className='quote'>
         {t('intro.quote.text.p1')}
-        <span className='quote-span'>{t('intro.quote.text.span1')}</span>
+        <span>{t('intro.quote.text.span1')}</span>
         {t('intro.quote.text.p2')}
-        <span className='quote-span'>{t('intro.quote.text.span2')}</span>
+        <span>{t('intro.quote.text.span2')}</span>
         {t('intro.quote.text.p3')}
-        <span className='quote-span'>{t('intro.quote.text.span3')}</span>
+        <span>{t('intro.quote.text.span3')}</span>
         {t('intro.quote.text.p4')}
       </Typography>
       <Typography variant='h4' component='div' className='quote-end'></Typography>

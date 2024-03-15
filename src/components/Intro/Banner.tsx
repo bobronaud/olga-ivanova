@@ -6,15 +6,18 @@ const Banner = () => {
   const { t } = useTranslation();
   return (
     <Box
-      className='banner-box'
       sx={{
         display: 'flex',
         flexDirection: 'column',
         mb: 5,
       }}>
-      <Box className='banner-text'>
-        <Typography variant='h3'>{t('intro.banner.fullname')}</Typography>
-        <Typography variant='h4'>{t('intro.banner.title')}</Typography>
+      <Box sx={{ textAlign: 'center' }}>
+        <Typography gutterBottom variant='h3'>
+          {t('intro.banner.fullname')}
+        </Typography>
+        <Typography gutterBottom variant='h4'>
+          {t('intro.banner.title')}
+        </Typography>
         <Typography variant='h5'>{t('intro.banner.text')}</Typography>
       </Box>
     </Box>

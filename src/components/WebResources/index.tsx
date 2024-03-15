@@ -31,35 +31,33 @@ const WebResources = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <Box id='poleznie-internet-resursi' />
-      <Container maxWidth={false} id='webresources-wrap'>
-        <Container
-          maxWidth='md'
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            py: 5,
-          }}>
-          <Typography variant='h2' component='h1' sx={{ mb: 3 }}>
-            {t('webresources.header')}
-          </Typography>
-          <Box sx={{ width: '100%' }}>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
-              {webResoursesData.map((item, index) => {
-                const serialNumber = index + 1;
-                return (
-                  <Link target='_blank' variant='h6' href={item}>{`${serialNumber}. ${t(
-                    `webresources.links.${index}`,
-                  )}`}</Link>
-                );
-              })}
-            </Box>
+    <Container maxWidth={false} id='webresources-wrap'>
+      <Container
+        maxWidth='md'
+        id='poleznie-internet-resursi'
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          py: 5,
+        }}>
+        <Typography variant='h2' component='h1' sx={{ mb: 3 }}>
+          {t('webresources.header')}
+        </Typography>
+        <Box sx={{ width: '100%' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
+            {webResoursesData.map((item, index) => {
+              const serialNumber = index + 1;
+              return (
+                <Link target='_blank' variant='h6' href={item}>{`${serialNumber}. ${t(
+                  `webresources.links.${index}`,
+                )}`}</Link>
+              );
+            })}
           </Box>
-        </Container>
+        </Box>
       </Container>
-    </>
+    </Container>
   );
 };
 

@@ -40,7 +40,11 @@ const Navbar = () => {
   const isDesktopUsing = useMediaQuery(theme.breakpoints.up('md'));
 
   const handleNavigate = (hash: string): void => {
-    window.location.hash = '#' + hash;
+    const element = document.getElementById(hash) as HTMLElement;
+    window.scrollTo({
+      top: element.offsetTop - 64,
+      behavior: 'smooth',
+    });
   };
 
   return (

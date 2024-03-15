@@ -59,45 +59,43 @@ const Techniques = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <Box id='metodicheskiy-fond' />
-      <Container maxWidth={false} id='techniques-wrap'>
-        <Container
-          maxWidth='md'
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            py: 5,
-          }}>
-          <Typography align='center' variant='h2' component='h1' sx={{ mb: 3 }}>
-            {t('techniques.header')}
-          </Typography>
-          <Box sx={{ width: '100%' }}>
-            {techniquesData.map((item, index) => (
-              <Accordion className='accordion'>
-                <AccordionSummary
-                  expandIcon={<ExpandMoreIcon />}
-                  aria-controls={`panel${index + 1}-content`}
-                  id={`panel${index + 1}-header`}>
-                  <Typography variant='h6'>
-                    {t(`techniques.accordion.${item.name}`)}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <iframe
-                    src={item.src}
-                    title={t(`techniques.accordion.${item.name}`)}
-                    width='100%'
-                    height='600'
-                    allow='autoplay'></iframe>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </Box>
-        </Container>
+    <Container maxWidth={false} id='techniques-wrap'>
+      <Container
+        maxWidth='md'
+        id='metodicheskiy-fond'
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          py: 5,
+        }}>
+        <Typography align='center' variant='h2' component='h1' sx={{ mb: 3 }}>
+          {t('techniques.header')}
+        </Typography>
+        <Box sx={{ width: '100%' }}>
+          {techniquesData.map((item, index) => (
+            <Accordion className='accordion'>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls={`panel${index + 1}-content`}
+                id={`panel${index + 1}-header`}>
+                <Typography variant='h6'>
+                  {t(`techniques.accordion.${item.name}`)}
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <iframe
+                  src={item.src}
+                  title={t(`techniques.accordion.${item.name}`)}
+                  width='100%'
+                  height='600'
+                  allow='autoplay'></iframe>
+              </AccordionDetails>
+            </Accordion>
+          ))}
+        </Box>
       </Container>
-    </>
+    </Container>
   );
 };
 

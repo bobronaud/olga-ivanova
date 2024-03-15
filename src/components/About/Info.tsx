@@ -14,7 +14,7 @@ const Info = () => {
       <Grid item xs={12} md={6}>
         <Box className='photo-wrap' sx={{ width: '100%' }}>
           <Box
-            className='intro-img'
+            className='img'
             component='img'
             src={photo}
             sx={{ width: '100%', height: '100%' }}

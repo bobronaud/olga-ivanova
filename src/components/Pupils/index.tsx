@@ -27,40 +27,38 @@ const Pupils = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <Box id='vospitanniki' />
-      <Container maxWidth={false} id='pupils-wrap'>
-        <Container
-          maxWidth='md'
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            py: 5,
-          }}>
-          <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
-            {t('pupils.arts')}
-          </Typography>
-          <Grid container spacing={1} sx={{ mb: 10 }}>
-            {imagesArts.map((image, index) => (
-              <Grid item xs={4} md={4} key={index}>
-                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
-              </Grid>
-            ))}
-          </Grid>
-          <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
-            {t('pupils.achivments')}
-          </Typography>
-          <Grid container spacing={1}>
-            {imagesCertificates.map((image, index) => (
-              <Grid item xs={4} md={3} key={index}>
-                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+    <Container maxWidth={false} id='pupils-wrap'>
+      <Container
+        maxWidth='md'
+        id='vospitanniki'
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          py: 5,
+        }}>
+        <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
+          {t('pupils.arts')}
+        </Typography>
+        <Grid container spacing={1} sx={{ mb: 10 }}>
+          {imagesArts.map((image, index) => (
+            <Grid item xs={4} md={4} key={index}>
+              <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+            </Grid>
+          ))}
+        </Grid>
+        <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
+          {t('pupils.achivments')}
+        </Typography>
+        <Grid container spacing={1}>
+          {imagesCertificates.map((image, index) => (
+            <Grid item xs={4} md={3} key={index}>
+              <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
-    </>
+    </Container>
   );
 };
 
