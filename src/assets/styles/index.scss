@@ -5,14 +5,17 @@ $image-border-color: blue;
 $grad: linear-gradient(to bottom right, green, blue, purple);
 $photo-grad: linear-gradient(to bottom right, red, orange, blue);
 
-$about-bg: #e7ecff;
+$about-bg: #e6e6fa;
 $about-color: #0e1563;
 
 $parents-bg: #99ff99;
 $parents-color: #032609;
 
-$pupils-bg: #fffadd;
+$pupils-bg: #fee5ac;
 $pupils-color: #292903;
+
+$techniques-bg: #badbad;
+$techniques-color: #202620;
 
 body {
   padding: 0;
@@ -50,6 +53,15 @@ body {
 #pupils-wrap {
   background-color: $pupils-bg;
   color: $pupils-color;
+}
+
+#techniques-wrap {
+  background-color: $techniques-bg;
+  color: $techniques-color;
+  .accordion {
+    background-color: #a4cca3;
+    color: $techniques-color;
+  }
 }
 
 .banner-box {

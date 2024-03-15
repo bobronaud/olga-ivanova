@@ -38,7 +38,7 @@ const Pupils = () => {
           py: 5,
         }}>
         <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
-          {t('pupils.arts.header')}
+          {t('pupils.arts')}
         </Typography>
         <Grid container spacing={1} sx={{ mb: 10 }}>
           {imagesArts.map((image, index) => (
@@ -48,7 +48,7 @@ const Pupils = () => {
           ))}
         </Grid>
         <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
-          {t('pupils.achivments.header')}
+          {t('pupils.achivments')}
         </Typography>
         <Grid container spacing={1}>
           {imagesCertificates.map((image, index) => (
