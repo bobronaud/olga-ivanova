@@ -7,14 +7,10 @@ import Link from '@mui/material/Link';
 
 import tgIcon from '../../assets/images/socialIcons/telegram.png';
 import vkIcon from '../../assets/images/socialIcons/vk.png';
-import waIcon from '../../assets/images/socialIcons/whatsapp.png';
-import emailIcon from '../../assets/images/socialIcons/email.png';
 
 const icons = [
   { icon: vkIcon, link: 'https://vk.com/id480523342' },
   { icon: tgIcon, link: 'https://t.me/olenkanoskova70' },
-  { icon: waIcon, link: '#' },
-  { icon: emailIcon, link: '#' },
 ];
 
 const Footer = () => {
@@ -25,13 +21,29 @@ const Footer = () => {
     <Container maxWidth={false} id='footer'>
       <Container
         maxWidth='md'
-        sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', py: 2 }}>
-        <Typography sx={{ mr: 3 }}>{t('footer.name') + ' © ' + currentYear}</Typography>
-        {icons.map(({ icon, link }) => (
-          <Link href={link} target='_blank'>
-            <Box sx={{ mr: 1 }} component='img' src={icon} />
-          </Link>
-        ))}
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          py: 2,
+        }}>
+        <Typography>{t('footer.address')}</Typography>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}>
+          <Typography sx={{ mr: 1 }}>{t('footer.email')}</Typography>
+          {icons.map(({ icon, link }, index) => (
+            <Link key={index} href={link} target='_blank'>
+              <Box sx={{ mr: 1 }} component='img' src={icon} />
+            </Link>
+          ))}
+        </Box>
+        <Typography>{t('footer.name') + ' © ' + currentYear}</Typography>
       </Container>
     </Container>
   );

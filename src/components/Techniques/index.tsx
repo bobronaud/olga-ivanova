@@ -74,7 +74,7 @@ const Techniques = () => {
         </Typography>
         <Box sx={{ width: '100%' }}>
           {techniquesData.map((item, index) => (
-            <Accordion className='accordion'>
+            <Accordion className='accordion' key={index}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls={`panel${index + 1}-content`}

@@ -45,7 +45,9 @@ const About = () => {
         <Grid container spacing={1}>
           {images.map((image, index) => (
             <Grid item xs={4} md={3} key={index}>
-              <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+              <a href={image}>
+                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+              </a>
             </Grid>
           ))}
         </Grid>

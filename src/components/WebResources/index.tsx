@@ -49,7 +49,11 @@ const WebResources = () => {
             {webResoursesData.map((item, index) => {
               const serialNumber = index + 1;
               return (
-                <Link target='_blank' variant='h6' href={item}>{`${serialNumber}. ${t(
+                <Link
+                  key={index}
+                  target='_blank'
+                  variant='h6'
+                  href={item}>{`${serialNumber}. ${t(
                   `webresources.links.${index}`,
                 )}`}</Link>
               );

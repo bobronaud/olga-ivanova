@@ -13,12 +13,14 @@ const Info = () => {
     <Grid container spacing={2} sx={{ mb: 7 }}>
       <Grid item xs={12} md={6}>
         <Box className='photo-wrap' sx={{ width: '100%' }}>
-          <Box
-            className='img'
-            component='img'
-            src={photo}
-            sx={{ width: '100%', height: '100%' }}
-          />
+          <a href={photo}>
+            <Box
+              className='img'
+              component='img'
+              src={photo}
+              sx={{ width: '100%', height: '100%' }}
+            />
+          </a>
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
