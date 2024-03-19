@@ -54,7 +54,12 @@ const MenuMobile = ({ sections, handleNavigate }: PropsType) => {
           display: 'block',
         }}>
         {sections.map((section) => (
-          <MenuItem key={section.name} onClick={() => handleNavigate(section.hash)}>
+          <MenuItem
+            key={section.name}
+            onClick={() => {
+              handleNavigate(section.hash);
+              handleCloseNavMenu();
+            }}>
             {section.name}
           </MenuItem>
         ))}
