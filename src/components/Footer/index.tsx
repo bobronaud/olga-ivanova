@@ -28,11 +28,10 @@ const Footer = () => {
           alignItems: 'center',
           py: 2,
         }}>
-        <Typography>{t('footer.address')}</Typography>
+        <Typography align='center'>{t('footer.address')}</Typography>
         <Box
           sx={{
             display: 'flex',
-            flexDirection: 'row',
             justifyContent: 'center',
             alignItems: 'center',
           }}>
@@ -43,7 +42,7 @@ const Footer = () => {
             </Link>
           ))}
         </Box>
-        <Typography>{t('footer.name') + ' © ' + currentYear}</Typography>
+        <Typography align='center'>{t('footer.name') + ' © ' + currentYear}</Typography>
       </Container>
     </Container>
   );
