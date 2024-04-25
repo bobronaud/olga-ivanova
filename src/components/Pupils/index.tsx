@@ -37,8 +37,8 @@ const Pupils = () => {
           {t('pupils.arts')}
         </Typography>
         <Grid container spacing={1} sx={{ mb: 10 }}>
-          {imagesArts.map((image, index) => (
-            <Grid item xs={4} md={3} key={index}>
+          {imagesArts.map((image) => (
+            <Grid item xs={4} md={3} key={image}>
               <a href={image}>
                 <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>
@@ -49,8 +49,8 @@ const Pupils = () => {
           {t('pupils.achivments')}
         </Typography>
         <Grid container spacing={1}>
-          {imagesCertificates.map((image, index) => (
-            <Grid item xs={4} md={3} key={index}>
+          {imagesCertificates.map((image) => (
+            <Grid item xs={4} md={3} key={image}>
               <a href={image}>
                 <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>

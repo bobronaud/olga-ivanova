@@ -36,8 +36,8 @@ const About = () => {
           {t('about.achivments.header')}
         </Typography>
         <Grid container spacing={1}>
-          {images.map((image, index) => (
-            <Grid item xs={4} md={3} key={index}>
+          {images.map((image) => (
+            <Grid item xs={4} md={3} key={image}>
               <a href={image}>
                 <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>

@@ -43,7 +43,7 @@ const Navbar = () => {
     const element = document.getElementById(hash) as HTMLElement;
     window.scrollTo({
       top: element.offsetTop - 64,
-      behavior: 'smooth',
+      behavior: 'auto',
     });
   };
 
