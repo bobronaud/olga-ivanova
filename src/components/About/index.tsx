@@ -46,7 +46,12 @@ const About = () => {
           {images.map((image, index) => (
             <Grid item xs={4} md={3} key={index}>
               <a href={image}>
-                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+                <Box
+                  component='img'
+                  loading='lazy'
+                  src={image}
+                  sx={{ width: '100%', height: '100%' }}
+                />
               </a>
             </Grid>
           ))}
