@@ -5,23 +5,19 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-// @ts-ignore
-const importAll = (r) => {
-  const images = r.keys().reduce((acc: string[], item: string) => {
-    const image = r(item);
-    return [...acc, image];
-  }, []);
-  return images;
-};
+const arts = require.context(
+  '../../assets/images/pupilsArts',
+  false,
+  /\.(png|jpe?g|svg)$/,
+);
+const imagesArts = arts.keys().map(arts) as string[];
 
-const imagesArts: string[] = importAll(
-  // @ts-ignore
-  require.context('../../assets/images/pupilsArts', false, /.jpg/),
+const certificates = require.context(
+  '../../assets/images/pupilsCertificates',
+  false,
+  /\.(png|jpe?g|svg)$/,
 );
-const imagesCertificates: string[] = importAll(
-  // @ts-ignore
-  require.context('../../assets/images/pupilsCertificates', false, /.jpg/),
-);
+const imagesCertificates = certificates.keys().map(certificates) as string[];
 
 const Pupils = () => {
   const { t } = useTranslation();
@@ -42,14 +38,9 @@ const Pupils = () => {
         </Typography>
         <Grid container spacing={1} sx={{ mb: 10 }}>
           {imagesArts.map((image, index) => (
-            <Grid item xs={4} md={4} key={index}>
+            <Grid item xs={4} md={3} key={index}>
               <a href={image}>
-                <Box
-                  component='img'
-                  loading='lazy'
-                  src={image}
-                  sx={{ width: '100%', height: '100%' }}
-                />
+                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>
             </Grid>
           ))}
@@ -61,12 +52,7 @@ const Pupils = () => {
           {imagesCertificates.map((image, index) => (
             <Grid item xs={4} md={3} key={index}>
               <a href={image}>
-                <Box
-                  component='img'
-                  loading='lazy'
-                  src={image}
-                  sx={{ width: '100%', height: '100%' }}
-                />
+                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>
             </Grid>
           ))}

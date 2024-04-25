@@ -7,19 +7,12 @@ import Typography from '@mui/material/Typography';
 
 import Info from './Info';
 
-// @ts-ignore
-const importAll = (r) => {
-  const images = r.keys().reduce((acc: string[], item: string) => {
-    const image = r(item);
-    return [...acc, image];
-  }, []);
-  return images;
-};
-
-const images: string[] = importAll(
-  // @ts-ignore
-  require.context('../../assets/images/myCertificates', false, /.jpg/),
+const certificates = require.context(
+  '../../assets/images/myCertificates',
+  false,
+  /\.(png|jpe?g|svg)$/,
 );
+const images = certificates.keys().map(certificates) as string[];
 
 const About = () => {
   const { t } = useTranslation();
@@ -46,12 +39,7 @@ const About = () => {
           {images.map((image, index) => (
             <Grid item xs={4} md={3} key={index}>
               <a href={image}>
-                <Box
-                  component='img'
-                  loading='lazy'
-                  src={image}
-                  sx={{ width: '100%', height: '100%' }}
-                />
+                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
               </a>
             </Grid>
           ))}
