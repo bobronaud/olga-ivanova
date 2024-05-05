@@ -4,7 +4,10 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
+import ImgWithPreloader from '../ImgWithPreloader';
+
 import photo from '../../assets/images/ownPhoto.jpg';
+import preloader from '../../assets/images/preloaders/ownPhotoMock.jpg';
 
 const Info = () => {
   const { t } = useTranslation();
@@ -14,10 +17,10 @@ const Info = () => {
       <Grid item xs={12} md={6}>
         <Box className='photo-wrap' sx={{ width: '100%' }}>
           <a href={photo}>
-            <Box
+            <ImgWithPreloader
+              preloader={preloader}
+              image={photo}
               className='img'
-              component='img'
-              src={photo}
               sx={{ width: '100%', height: '100%' }}
             />
           </a>
