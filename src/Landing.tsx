@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 
 import Navbar from './components/Navbar';
@@ -11,9 +10,6 @@ import WebResources from './components/WebResources';
 import Footer from './components/Footer';
 
 const Landing = () => {
-  useEffect(() => {
-    document.body.style.opacity = '1';
-  }, []);
   return (
     <>
       <Navbar />
