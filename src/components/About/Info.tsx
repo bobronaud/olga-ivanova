@@ -17,12 +17,7 @@ const Info = () => {
       <Grid item xs={12} md={6}>
         <Box className='photo-wrap' sx={{ width: '100%' }}>
           <a href={photo}>
-            <ImgWithPreloader
-              preloader={preloader}
-              image={photo}
-              className='img'
-              sx={{ width: '100%', height: '100%' }}
-            />
+            <ImgWithPreloader preloader={preloader} image={photo} />
           </a>
         </Box>
       </Grid>

@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import Info from './Info';
+import ImgWithPreloader from '../ImgWithPreloader';
+import preloader from '../../assets/images/preloaders/smile.png';
 
 const certificates = require.context(
   '../../assets/images/myCertificates',
@@ -39,7 +40,7 @@ const About = () => {
           {images.map((image) => (
             <Grid item xs={4} md={3} key={image}>
               <a href={image}>
-                <Box component='img' src={image} sx={{ width: '100%', height: '100%' }} />
+                <ImgWithPreloader preloader={preloader} image={image} />
               </a>
             </Grid>
           ))}
