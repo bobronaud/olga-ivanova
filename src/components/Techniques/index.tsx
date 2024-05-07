@@ -9,17 +9,17 @@ const techniquesData = [
   {
     name: 'graphics-texture',
     link: 'https://drive.google.com/file/d/1X-bypmaDHLOkPrdYfjs1qQWy7eCFsnBw/preview',
-    color: 'red',
+    color: '#e80c38', //red
   },
   {
     name: 'painting-of-berries&leaves',
     link: 'https://drive.google.com/file/d/1JZOiauUaL2Uw7g1LhzEFDFoK9UCI1DnT/preview',
-    color: 'orange',
+    color: '#ff6a00', //orange
   },
   {
     name: 'strokes-in-a-circle',
     link: 'https://drive.google.com/file/d/1M0XB2WOnC9G2ZTQJPgVGcfqASd8uWBVF/preview',
-    color: 'yellow',
+    color: '#fbff00', //yellow
   },
   {
     name: 'composition',
@@ -39,17 +39,17 @@ const techniquesData = [
   {
     name: 'millefiori-technique',
     link: 'https://drive.google.com/file/d/18i05XUe09MsqyThxqpoNRpej_vFujP_f/preview',
-    color: 'red',
+    color: '#e80c38', //red
   },
   {
     name: 'space-landscape',
     link: 'https://drive.google.com/file/d/1tKfa9dA0Qjh1mw8k5g8832OhqJ0TwbQ9/preview',
-    color: 'orange',
+    color: '#ff6a00', //orange
   },
   {
     name: 'techniques-art',
     link: 'https://drive.google.com/file/d/1PXJY3LLM5YgpaA4C9YkPWzejkNPjNoGA/preview',
-    color: 'yellow',
+    color: '#fbff00', //yellow
   },
   {
     name: 'formation-of-color-perception',
@@ -67,32 +67,29 @@ const Techniques = () => {
   const { t } = useTranslation();
 
   return (
-    <Container maxWidth={false} id="techniques-wrap">
+    <Container maxWidth={false} id='techniques-wrap'>
       <Container
-        maxWidth="md"
-        id="metodicheskiy-fond"
+        maxWidth='md'
+        id='metodicheskiy-fond'
         sx={{
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
           py: 5,
-        }}
-      >
-        <Typography align="center" variant="h2" component="h1" sx={{ mb: 3 }}>
+        }}>
+        <Typography align='center' variant='h2' component='h1' sx={{ mb: 3 }}>
           {t('techniques.header')}
         </Typography>
         <Box
-          sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: 1 }}
-        >
+          sx={{ display: 'flex', flexDirection: 'column', alignItems: 'start', gap: 1 }}>
           {techniquesData.map((item, index) => (
             <Link
               key={index}
-              underline="hover"
-              variant="h6"
+              underline='hover'
+              variant='h5'
               color={item.color}
               href={item.link}
-              target="_blank"
-            >
+              target='_blank'>
               - {t(`techniques.accordion.${item.name}`)}
             </Link>
           ))}
