@@ -1,80 +1,47 @@
-$image-border-color: blue;
-$grad: linear-gradient(to bottom right, green, blue, purple);
-$photo-grad: linear-gradient(to bottom right, red, orange, blue);
-
-$intro-bg: #fff;
-$intro-color: #0b0340;
-
-$about-bg: #e6e6fa;
-$about-color: #0e1563;
-
-$parents-bg: #99ff99;
-$parents-color: #032609;
-
-$pupils-bg: #fee5ac;
-$pupils-color: #292903;
-
-$techniques-bg: #badbad;
-$techniques-color: #202620;
-
-$webresources-bg: #fff;
-$webresources-color: #243b91;
+@import 'vars';
 
 body {
   padding: 0;
 }
 
-#intro-wrap {
-  background-color: $intro-bg;
-  color: $intro-color;
+@mixin section-colors($bg, $text) {
+  background-color: $bg;
+  color: $text;
+}
 
+#intro-wrap {
+  @include section-colors($intro-bg, $intro-color);
   span {
     color: #19c23d;
   }
 }
 
 #about-wrap {
-  background-color: $about-bg;
-  color: $about-color;
-
+  @include section-colors($about-bg, $about-color);
   hr {
     border-color: $about-color;
     background-color: $about-color;
     color: $about-color;
   }
-
   a {
     color: $about-color;
   }
 }
 
 #parents-wrap {
-  scroll-padding-top: 100px;
-  background-color: $parents-bg;
-  color: $parents-color;
-  .accordion {
-    background-color: #6aeb82;
-    color: $parents-color;
-  }
+  @include section-colors($parents-bg, $parents-color);
 }
 
 #pupils-wrap {
-  background-color: $pupils-bg;
-  color: $pupils-color;
+  @include section-colors($pupils-bg, $pupils-color);
 }
 
 #techniques-wrap {
-  background-color: $techniques-bg;
-  color: $techniques-color;
-  .accordion {
-    background-color: #a4cca3;
-    color: $techniques-color;
-  }
+  @include section-colors($techniques-bg, $techniques-color);
 }
 
 #webresources-wrap {
-  background-color: $webresources-bg;
-  color: $webresources-color;
+  @include section-colors($webresources-bg, $webresources-color);
 }
 
 #footer {
@@ -84,18 +51,15 @@ body {
 
 .image-wrap {
   position: relative;
-  background: $grad;
   padding: 6px;
   padding-bottom: 0;
   border-radius: 10px;
-}
-
-.photo-wrap {
-  position: relative;
-  background: $photo-grad;
-  padding: 6px;
-  padding-bottom: 0;
-  border-radius: 10px;
+  &-intro {
+    background: $intro-grad;
+  }
+  &-about {
+    background: $about-grad;
+  }
 }
 
 .img {

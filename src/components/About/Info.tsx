@@ -15,7 +15,7 @@ const Info = () => {
   return (
     <Grid container spacing={2} sx={{ mb: 7 }}>
       <Grid item xs={12} md={6}>
-        <Box className='photo-wrap' sx={{ width: '100%' }}>
+        <Box className='image-wrap image-wrap-about' sx={{ width: '100%' }}>
           <a href={photo}>
             <ImgWithPreloader preloader={preloader} image={photo} />
           </a>

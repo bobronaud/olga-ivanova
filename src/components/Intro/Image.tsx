@@ -6,7 +6,7 @@ import preloader from '../../assets/images/preloaders/withPuplisMock.jpg';
 
 const Image = () => {
   return (
-    <Box className='image-wrap' sx={{ width: '100%' }}>
+    <Box className='image-wrap image-wrap-intro' sx={{ width: '100%' }}>
       <a href={image}>
         <ImgWithPreloader preloader={preloader} image={image} />
       </a>
