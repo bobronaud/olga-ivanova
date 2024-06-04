@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import Info from './Info';
 import ImgWithPreloader from '../ImgWithPreloader';
 import preloader from '../../assets/images/preloaders/smile.png';
+import { ImageList, ImageListItem } from '@mui/material';
 
 const certificates = require.context(
   '../../assets/images/myCertificates',
@@ -36,15 +36,18 @@ const About = () => {
         <Typography variant='h4' component='h2' sx={{ mb: 3 }}>
           {t('about.achivments.header')}
         </Typography>
-        <Grid container spacing={1}>
+        <ImageList variant='masonry' cols={3} gap={8}>
           {images.map((image) => (
-            <Grid item xs={4} md={3} key={image}>
+            <ImageListItem key={image}>
               <a href={image}>
-                <ImgWithPreloader preloader={preloader} image={image} />
+                <ImgWithPreloader
+                  preloader={preloader}
+                  image={`${image}?w=248&fit=crop&auto=format`}
+                />
               </a>
-            </Grid>
+            </ImageListItem>
           ))}
-        </Grid>
+        </ImageList>
       </Container>
     </Container>
   );

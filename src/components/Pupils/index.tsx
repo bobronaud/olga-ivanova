@@ -1,11 +1,11 @@
 import { useTranslation } from 'react-i18next';
 
 import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import preloader from '../../assets/images/preloaders/smile.png';
 
 import ImgWithPreloader from '../ImgWithPreloader';
+import { ImageList, ImageListItem } from '@mui/material';
 
 const arts = require.context(
   '../../assets/images/pupilsArts',
@@ -38,27 +38,33 @@ const Pupils = () => {
         <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
           {t('pupils.arts')}
         </Typography>
-        <Grid container spacing={1} sx={{ mb: 10 }}>
+        <ImageList variant='masonry' cols={3} gap={8}>
           {imagesArts.map((image) => (
-            <Grid item xs={4} md={3} key={image}>
+            <ImageListItem key={image}>
               <a href={image}>
-                <ImgWithPreloader preloader={preloader} image={image} />
+                <ImgWithPreloader
+                  preloader={preloader}
+                  image={`${image}?w=248&fit=crop&auto=format`}
+                />
               </a>
-            </Grid>
+            </ImageListItem>
           ))}
-        </Grid>
+        </ImageList>
         <Typography variant='h3' component='h1' align='center' sx={{ mb: 3 }}>
           {t('pupils.achivments')}
         </Typography>
-        <Grid container spacing={1}>
+        <ImageList variant='masonry' cols={3} gap={8}>
           {imagesCertificates.map((image) => (
-            <Grid item xs={4} md={3} key={image}>
+            <ImageListItem key={image}>
               <a href={image}>
-                <ImgWithPreloader preloader={preloader} image={image} />
+                <ImgWithPreloader
+                  preloader={preloader}
+                  image={`${image}?w=248&fit=crop&auto=format`}
+                />
               </a>
-            </Grid>
+            </ImageListItem>
           ))}
-        </Grid>
+        </ImageList>
       </Container>
     </Container>
   );

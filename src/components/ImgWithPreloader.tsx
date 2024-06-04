@@ -23,7 +23,7 @@ const ImgWithPreloader = ({ preloader, image }: Props) => {
       component='img'
       src={src}
       className='img'
-      sx={{ width: '100%', height: '100%' }}
+      sx={{ width: '100%', height: 'auto' }}
     />
   );
 };
